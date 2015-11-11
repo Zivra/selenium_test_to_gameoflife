@@ -48,7 +48,7 @@ public class titleTest {
         HtmlUnitDriver unitDriver = new HtmlUnitDriver();
         
         //Idalia
-        unitDriver.navigate().to("http://52.33.95.230:8080/game-of-life/");
+        unitDriver.navigate().to("http://52.34.12.24:8080/demo/");
         
         Assert.assertTrue("title should start differently", 
                                                 unitDriver.getTitle().startsWith("The Game Of Life"));
