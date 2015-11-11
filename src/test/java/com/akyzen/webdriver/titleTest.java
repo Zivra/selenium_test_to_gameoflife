@@ -20,8 +20,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import junit.framework.Assert;
 
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 /**
  *
@@ -31,36 +34,47 @@ public class titleTest {
     
     @Test
     public void titleNameTest() {
+        /*
         WebDriver driver = new FirefoxDriver();
-        driver.navigate().to("http://52.88.193.104:8080/game-of-life/");
+        driver.navigate().to("http://52.32.248.199:8080/game-of-life/");
 
         Assert.assertTrue("title should start differently", 
                                                 driver.getTitle().startsWith("The Game Of Life"));
 
         driver.close();        
-    }
-    
-    /*
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-    */
+                */
+        
+        // Declaring and initialising the HtmlUnitWebDriver
+        HtmlUnitDriver unitDriver = new HtmlUnitDriver();
+        
+        //Idalia
+        unitDriver.navigate().to("http://52.32.248.199:8080/game-of-life/");
+        
+        Assert.assertTrue("title should start differently", 
+                                                unitDriver.getTitle().startsWith("The Game Of Life"));
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+        System.out.println("Title is: " + unitDriver.getTitle());
+        unitDriver.close();         
+
+        /*
+        // open google.com webpage
+        unitDriver.get("http://google.com");
+
+        System.out.println("Title of the page is 1-> " + unitDriver.getTitle());
+
+        // find the search edit box on the google page
+        WebElement searchBox = unitDriver.findElement(By.name("q"));
+
+        // type in Selenium
+        searchBox.sendKeys("Selenium");
+
+        // find the search button
+        //WebElement button = unitDriver.findElement(By.name("btnK"));//gbqfba
+
+        // Click the button
+        //button.click();
+
+        System.out.println("Title of the page is 2-> " + unitDriver.getTitle());
+        */
+    }
 }
