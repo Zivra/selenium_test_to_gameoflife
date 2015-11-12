@@ -6,6 +6,7 @@
 package com.akyzen.webdriver;
 
 import junit.framework.Assert;
+
 import org.junit.Test;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
@@ -19,8 +20,6 @@ public class titleTest {
     public void titleNameTest() {
         // Declaring and initialising the HtmlUnitWebDriver
         HtmlUnitDriver unitDriver = new HtmlUnitDriver();
-        
-        //Idalia
         unitDriver.navigate().to("http://52.34.12.24:8080/game-of-life/");
         
         Assert.assertTrue("title should start differently", 
