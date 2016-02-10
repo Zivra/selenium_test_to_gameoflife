@@ -34,7 +34,7 @@ public class newGameButtonTest {
     public void newGameButtonClicTest() {
         //WebDriver driver = new FirefoxDriver();
         HtmlUnitDriver unitDriver = new HtmlUnitDriver();
-        unitDriver.navigate().to("http://52.36.17.215:8080/game-of-life");
+        unitDriver.navigate().to("http://52.32.53.249:8080/game-of-life");
             
         WebElement newGameButton = unitDriver.findElement(By.linkText("New Game"));
         newGameButton.click();
